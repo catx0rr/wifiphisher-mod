@@ -22,8 +22,8 @@ rm -rf /bin/wifiphisher
 *Clone repository*
 ```sh
 cd /opt && \
-git clone git@github.com:offsecph/wifiphisher.git && \
-cd wifiphisher
+git clone git@github.com:catx0rr/wifiphisher-mod.git && \
+cd wifiphisher-mod
 ```
 
 *Build using virtual environment*
