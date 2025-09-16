@@ -1,0 +1,208 @@
+/* ---------------- Base Reset ---------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+body.gradient-bg {
+  background: linear-gradient(to bottom, var(--gradient-start, #0057b8), var(--gradient-end, #9bc6f2));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* ----------- Main container layout ------------ */
+.container {
+  width: 90%;
+  max-width: 400px;
+  padding: 25px;
+  background: var(--container-color, #fff);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1 !important;
+}
+
+.container.fixed-height {
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  width: 120px;
+  margin: 0 auto 15px;
+  display: block;
+}
+
+h2 {
+  color: var(--heading-color, #003366);
+  margin-bottom: 10px;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  visibility: hidden;
+  margin-bottom: 10px;
+  height: 20px;
+}
+
+/* Input Fields */
+.input-field,
+.connect-btn,
+.accept-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: block;
+  border: 1px solid var(--input-border-color, #ccc);
+  box-sizing: border-box;
+}
+
+.input-field {
+  background: var(--input-background-color, #fff);
+  color: var(--input-text-color, #000);
+}
+
+.input-field::placeholder {
+  color: var(--input-text-placeholder-color, #999);
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--input-focus-color, #0057b8);
+}
+
+/* Buttons */
+.connect-btn,
+.accept-btn {
+  background: var(--connect-accept-bg, #0057b8);
+  color: var(--connect-accept-text, #fff);
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+/* Hover effect ONLY when enabled */
+.connect-btn:not(:disabled):hover,
+.accept-btn:not(:disabled):hover {
+  background: var(--connect-accept-hover, #004090);
+}
+
+/* Disabled state overrides */
+.connect-btn:disabled,
+.accept-btn:disabled {
+  background: var(--connect-accept-bg, #0057b8) !important;
+  cursor: not-allowed;
+}
+
+/* Accept button visibility */
+.accept-btn.hidden {
+  display: none;
+}
+
+/* Layout helpers */
+.accept-btn {
+  margin-top: -10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.accept-btn-container {
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+small {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #666;
+}
+
+/* Privacy Policy Link */
+#privacy-link {
+  color: var(--privacy-link-color, #0057b8);
+}
+
+#privacy-link:hover {
+  text-decoration: underline;
+  color: var(--privacy-link-hover-color, #003366);
+}
+
+/* Anchor overrides */
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Round/Square toggles */
+.rounded-container {
+  border-radius: 10px !important;
+}
+.rounded-input {
+  border-radius: 5px !important;
+}
+.rounded-button {
+  border-radius: 5px !important;
+}
+.square-container {
+  border-radius: 0 !important;
+}
+.square-input {
+  border-radius: 0 !important;
+}
+.square-button {
+  border-radius: 0 !important;
+}
+
+/* ---------------- Desktop Styles ---------------- */
+@media (min-width: 768px) {
+  body.gradient-bg {
+    background: linear-gradient(to bottom, var(--gradient-start, #0057b8), var(--gradient-end, #9bc6f2));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .container {
+    margin-top: -80px;
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+

